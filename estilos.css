@@ -1,0 +1,135 @@
+/* Fuente y base */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Fondo degradado moderno */
+body {
+    background: linear-gradient(to bottom, #3b5998, #8b9dc3); /* Colores fríos */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Texto gris oscuro */
+}
+
+/* Logo de la UMG */
+.logo-umg img {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height: auto;
+    z-index: 10;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4)); /* Sombra elegante */
+}
+
+/* Contenedores principales */
+.login-container, .curso-container {
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra moderna */
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    position: relative;
+    text-align: center; /* Texto centrado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imágenes integradas */
+img.inline-image {
+    width: 150px;
+    height: auto;
+    margin: 0 0 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafos */
+p {
+    font-size: 15px;
+    color: #fff; /* Texto gris oscuro */
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada y botones */
+input[type="text"], input[type="password"], select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3b5998;
+    box-shadow: 0 0 5px rgba(59, 89, 152, 0.5);
+}
+
+/* Botón estilizado */
+button {
+    width: 90%;
+    padding: 12px;
+    margin: 15px 0;
+    font-size: 16px;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2d4373;
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Encabezados */
+h1, h2 {
+    font-size: 26px;
+    color: #3b5998; /* Azul vibrante */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding: 0;
+    color: #333; /* Texto gris oscuro */
+}
+
+ul li {
+    background: #3b5998; /* Azul vibrante */
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Formularios */
+form {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Pantallas grandes */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    .login-container, .curso-container {
+        max-width: 800px;
+        padding: 40px;
+    }
+}

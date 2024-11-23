@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMG - Programación 2</title>
+    <link rel="icon" href="https://umg.edu.gt/img/Umg.png" type="image/png">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="login.js" defer></script>
+    <script src="curso.js" defer></script>
+    <script src="evaluacion.js" defer></script>
+</head>
+<body>
+    <!-- Contenedor para el Login -->
+    <div id="loginContainer" class="login-container">
+        <h2>Acceso a Programación II</h2>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" placeholder="Ingrese su usuario" required>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" placeholder="Ingrese su contraseña" required>
+        <button onclick="validarLogin()">Ingresar</button>
+        <p id="errorMensaje" style="color:red;"></p>
+    </div>
+
+    <!-- Contenedor principal del curso, oculto hasta hacer login -->
+    <div id="cursoContainer" class="curso-container" style="display:none;">
+        <!-- Aquí irá el contenido del curso -->
+        <h1>Bienvenidos al curso de Programación II</h1>
+        <p>Contenido del curso...</p>
+    </div>
+
+    <script>
+        // Función para manejar el login y mostrar el contenedor del curso
+        function validarLogin() {
+            const usuario = document.getElementById("usuario").value;
+            const contraseña = document.getElementById("contraseña").value;
+
+            if (usuario === "admin" && contraseña === "1234") { // Puedes personalizar las credenciales
+                document.getElementById("loginContainer").style.display = "none";
+                document.getElementById("cursoContainer").style.display = "block";
+            } else {
+                document.getElementById("errorMensaje").textContent = "Usuario o contraseña incorrectos.";
+            }
+        }
+
+        // Función para mostrar evaluaciones (por ejemplo, inicializar contenido)
+        function mostrarEvaluacion() {
+            console.log("Evaluaciones cargadas correctamente."); // Ejemplo de inicialización
+        }
+    </script>
+</body>
+</html>
